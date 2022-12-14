@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 import Apoio.Matematica;
 
 public class Calculadora { 
@@ -21,20 +22,21 @@ public class Calculadora {
 
             // INSERIR NUMEROS
 
-            System.out.print("\nInsira o primeiro numero: ");
-            valor1 = input.nextInt();
+            // prompt user to enter first number
+            String insert1 = JOptionPane.showInputDialog("Insira o primeiro numero:");
+            valor1 = Double.valueOf(insert1).doubleValue();
 
-            System.out.print("\nInsira o segundo numero: ");
-            valor2 = input.nextInt();
+            // prompt user to enter second number
+            String insert2 = JOptionPane.showInputDialog("Insira o segundo numero:");
+            valor2 = Double.valueOf(insert2).doubleValue();
 
             // SELECIONAR OPERADOR           
 
-            System.out.print("\nO que voce deseja fazer com os numeros acima?");
-            System.out.print("\n1 - Somar / 2 - Subtrair / 3 - Multiplicar / 4 - Dividir / 0 - Sair: ");
-            selecione = input.nextInt();
-
+            String insert3 = JOptionPane.showInputDialog("O que voce deseja fazer com os numeros digitados?\n1 - Somar / 2 - Subtrair / 3 - Multiplicar / 4 - Dividir / 0 - Sair:");
+            selecione = Integer.parseInt(insert3);
+            
             if (selecione == 0) {
-                System.out.print("\nOperacao finalizada");
+            	JOptionPane.showMessageDialog(null, "Operação finalizada.");
                 break;
             }
             
