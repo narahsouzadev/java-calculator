@@ -27,3 +27,9 @@ Developed to practice and consolidate core Java fundamentals, object encapsulati
 ```bash
 git clone [https://github.com/narahsouza/CalculadoraJava.git](https://github.com/narahsouza/CalculadoraJava.git)
 cd CalculadoraJava
+```
+2. Compile and run using an IDE (such as IntelliJ IDEA, Eclipse, or VS Code) by opening the project and launching the Main class, or execute directly via terminal:
+```bash
+javac -d bin src/Apoio/*.java src/Main.java
+java -cp bin Main
+```
